@@ -9,7 +9,7 @@
 
 # Author
 
-<h2  style="font-family: Jetbrains Mono"><strong>Jonah Gasura - Frontend Engineer</strong></h2>
+<h2  style="font-family: Jetbrains Mono"><strong>Jonah Gasura - Software Engineer</strong></h2>
 
 <img src="https://user-images.githubusercontent.com/99664202/166660461-bc5065a1-ab7f-4b13-9875-44916f11b309.JPG" width=35% height = 35%> [![Jonah's GitHub stats](https://github-readme-stats.vercel.app/api?username=jonahgasura)](https://github.com/anuraghazra/github-readme-stats)
 
