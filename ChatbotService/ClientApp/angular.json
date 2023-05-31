@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "ChatbotService"
+  "defaultProject": "ChatbotService",
+  "cli": {
+    "analytics": false
+  }
 }
