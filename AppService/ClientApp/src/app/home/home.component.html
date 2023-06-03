@@ -1,14 +1,29 @@
-<h1>Hello, world!</h1>
-<p>Welcome to your new single-page application, built with:</p>
-<ul>
-  <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-  <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
-  <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-</ul>
-<p>To help you get started, we've also set up:</p>
-<ul>
-  <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-  <li><strong>Angular CLI integration</strong>. In development mode, there's no need to run <code>ng serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-  <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>
-</ul>
-<p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>
+<div *ngIf="!showOther">
+  <h2>What is 43 Things?</h2>
+  <p>43 Things is the world's most popular online goal setting community. It's free and fun. How does it work?</p>
+  <div class="text-blocks">
+    <div class="text-block">
+      <h3>List your Goals</h3>
+      <p>Discover and list your goals. What do you want to do with your life? We'll help you figure it out.</p>
+    </div>
+    <div class="text-block">
+      <h3>Cheer</h3>
+      <p>Cheer people on the side who inspire you. They may cheer you back!</p>
+    </div>
+    <div class="text-block">
+      <h3>Record your progress</h3>
+      <p>Track your progress by writing entries. Ask questions and talk with people who share similar goals.</p>
+    </div>
+    <div class="text-block">
+      <h3>Get started</h3>
+      <p>Make a practice list of goals or create an account (43 Things is free)</p>
+    </div>
+  </div>
+  <button (click)="continue()">Get Started</button>
+</div>
+
+
+<div *ngIf="showOther">
+  <app-goals></app-goals>
+  <button (click)="continue()">Back</button>
+</div>

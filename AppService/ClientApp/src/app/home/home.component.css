@@ -1,0 +1,17 @@
+.text-blocks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-block {
+  width: 45%;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 20px;
+  border: white;
+  color: #1b6ec2;
+  font-weight: bold;
+}

@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "AppService"
+  "defaultProject": "AppService",
+  "cli": {
+    "analytics": false
+  }
 }

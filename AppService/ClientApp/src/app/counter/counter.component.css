@@ -1,0 +1,42 @@
+.chatbot-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.chat-window {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.chat-messages {
+  margin-bottom: 10px;
+}
+
+.user-message {
+  color: #000;
+}
+
+.bot-message {
+  color: #0066cc;
+}
+
+.chat-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+.input-field {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.submit-button {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
