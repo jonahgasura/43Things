@@ -1,9 +1,19 @@
-# BitByBit - Twitter Summariser
+# 43 Things
 
 ![GitHub issues](https://img.shields.io/github/issues/jonahgasura/43Things?color=4CBB17&style=for-the-badge)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/jonahgasura/43Things?color=red&style=for-the-badge)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/jonahgasura/43Things?color=4CBB17&style=for-the-badge)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/jonahgasura/43Things?color=red&style=for-the-badge)
+
+<div>
+  <h2> About 43 Things
+  <p> 43 Things is a system designed to create a goal setting community by allowing users to set a list of goals that would be publicly made available to other users in order to allow people to encourage one another and share advice on various goals. This repo's implementation of 43 Things focuses on the goal-setting aspect of the system and shows the ability to add goals as well as two additonal features the orignal system did not contain namely:
+  <ul>
+    <li>Brainstorming Chatbot: Chatbot functionality that allows a user to enter a tpic of interest and receive feedback as a suggested goal based on other popular goals related to that topic
+    <li> Sentiment Analysis: Analysing the text of goals to extract the tone/mood of the goals to allow system adminstrators to filter out any negative goals.
+  </ul>
+  </p>
+</div>
 
 [Project Board](https://github.com/users/jonahgasura/projects/1)
 
