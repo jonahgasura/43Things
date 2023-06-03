@@ -1,17 +1,29 @@
-<h2>What is 43 Things?</h2>
-<p>One line description of 43 things</p>
-<div class="text-blocks">
-  <div class="text-block">
-    <p>Text block 1</p>
+<div *ngIf="!showOther">
+  <h2>What is 43 Things?</h2>
+  <p>43 Things is the world's most popular online goal setting community. It's free and fun. How does it work?</p>
+  <div class="text-blocks">
+    <div class="text-block">
+      <h3>List your Goals</h3>
+      <p>Discover and list your goals. What do you want to do with your life? We'll help you figure it out.</p>
+    </div>
+    <div class="text-block">
+      <h3>Cheer</h3>
+      <p>Cheer people on the side who inspire you. They may cheer you back!</p>
+    </div>
+    <div class="text-block">
+      <h3>Record your progress</h3>
+      <p>Track your progress by writing entries. Ask questions and talk with people who share similar goals.</p>
+    </div>
+    <div class="text-block">
+      <h3>Get started</h3>
+      <p>Make a practice list of goals or create an account (43 Things is free)</p>
+    </div>
   </div>
-  <div class="text-block">
-    <p>Text block 2</p>
-  </div>
-  <div class="text-block">
-    <p>Text block 3</p>
-  </div>
-  <div class="text-block">
-    <p>Text block 4</p>
-  </div>
+  <button (click)="continue()">Get Started</button>
 </div>
-<button (click)="continue()">Continue</button>
+
+
+<div *ngIf="showOther">
+  <app-goals></app-goals>
+  <button (click)="continue()">Back</button>
+</div>

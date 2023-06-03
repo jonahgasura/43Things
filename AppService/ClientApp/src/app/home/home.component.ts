@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GoalsComponent } from '../goal/goals.component';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+  showOther: boolean = false;
+
   continue() {
-    // Handle continue button click
+
+    this.showOther = !this.showOther;
   }
 }
