@@ -6,10 +6,12 @@
 .text-block {
   width: 45%;
   padding: 20px;
-  border: 1px solid #ccc;
   margin-bottom: 10px;
 }
 
 button {
   margin-top: 20px;
+  border: white;
+  color: #1b6ec2;
+  font-weight: bold;
 }

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="goals-list">
+    <h2>List your goals</h2>
+    <ul>
+      <li *ngFor="let goal of existingGoals" class="goal-item">
+        <strong>{{ goal.title }}</strong> - {{ goal.description }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="goals-list">
+    <h2>Need Inspiration?</h2>
+    <ul>
+      <li *ngFor="let goal of popularGoals" class="goal-item">
+        <strong>{{ goal.title }}</strong>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="add-goal">
+  <h2>Add a new goal</h2>
+  <div>
+    <input [(ngModel)]="newGoalTitle" placeholder="Goal Title">
+    <input [(ngModel)]="newGoalDescription" placeholder="Goal Description">
+    <button (click)="addGoal()">Add</button>
+  </div>
+</div>
