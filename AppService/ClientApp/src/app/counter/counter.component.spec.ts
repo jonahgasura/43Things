@@ -1,34 +1,57 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CounterComponent } from './counter.component';
 
 describe('CounterComponent', () => {
+  let component: CounterComponent;
   let fixture: ComponentFixture<CounterComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CounterComponent ]
-    })
-    .compileComponents();
+      declarations: [CounterComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CounterComponent);
+    component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should display a title', async(() => {
-    const titleText = fixture.nativeElement.querySelector('h1').textContent;
-    expect(titleText).toEqual('Counter');
-  }));
+  it('should create the CounterComponent', () => {
+    expect(component).toBeTruthy();
+  });
 
-  it('should start with count 0, then increments by 1 when clicked', async(() => {
-    const countElement = fixture.nativeElement.querySelector('strong');
-    expect(countElement.textContent).toEqual('0');
+  it('should initialize suggestedGoal as undefined', () => {
+    expect(component.suggestedGoal).toBeUndefined();
+  });
 
-    const incrementButton = fixture.nativeElement.querySelector('button');
-    incrementButton.click();
-    fixture.detectChanges();
-    expect(countElement.textContent).toEqual('1');
-  }));
+  it('should initialize loading as false', () => {
+    expect(component.loading).toBeFalse();
+  });
+
+  it('should set loading to true and update suggestedGoal after 2 seconds when suggestGoal() is called', async () => {
+    const topic = 'health';
+    component.suggestGoal(topic);
+
+    expect(component.loading).toBeTrue();
+    expect(component.suggestedGoal).toBeUndefined();
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    expect(component.loading).toBeFalse();
+    expect(component.suggestedGoal).toBe('Start a daily exercise routine');
+  });
+
+  it('should set loading to false and update suggestedGoal to a default message if topic is not recognized', async () => {
+    const topic = 'unknown';
+    component.suggestGoal(topic);
+
+    expect(component.loading).toBeTrue();
+    expect(component.suggestedGoal).toBeUndefined();
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    expect(component.loading).toBeFalse();
+    expect(component.suggestedGoal).toBe("Sorry, I don't have a suggestion for that topic.");
+  });
 });
