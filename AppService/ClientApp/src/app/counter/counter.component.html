@@ -1,7 +1,17 @@
-<h1>Counter</h1>
+<div class="chatbot-container">
+  <h1>Chatbot</h1>
+  <p>Interact below to brainstorm ideas for goals</p>
 
-<p>This is a simple example of an Angular component.</p>
+  <div class="chat-window">
+    <div class="chat-messages">
+      <p class="user-message">Hi, Please enter a topic below and I will suggest a goal for that potential topic.</p>
+      <p class="bot-message" *ngIf="loading">Loading...</p>
+      <p class="bot-message" *ngIf="suggestedGoal && !loading">Chatbot: {{ suggestedGoal }}</p>
+    </div>
 
-<p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
-
-<button class="btn btn-primary" (click)="incrementCounter()">Increment</button>
+    <form (ngSubmit)="suggestGoal(topic.value)" class="chat-input">
+      <input type="text" #topic placeholder="Type your topic here" class="input-field">
+      <button type="submit" class="submit-button">Send</button>
+    </form>
+  </div>
+</div>
